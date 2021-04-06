@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npx @google-cloud/functions-framework --target=fulfillment",
     "serve": "firebase serve --only functions"
   },
   "keywords": [],

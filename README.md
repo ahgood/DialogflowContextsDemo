@@ -9,7 +9,7 @@ This is a simple voice app to demonstrate a way to use Dialogflow contexts in co
 3. Compress folder `agent` as `agent.zip`
 4. Create a new Dialogflow agent: https://dialogflow.cloud.google.com/
 5. In Dialogflow console, Click ⚙️ icon, select `Export and Import`, `RESTORE FROM ZIP` and then follow the steps to restore agent by using `agent.zip`
-6. Run `npm install` and `npx @google-cloud/functions-framework --target=fulfillment`
+6. Run `npm install` and `npm start`
 7. In Dialogflow console, click `Integrations` and then click the link in `...Continue with the integration` to open simulator
 
 ## Test
