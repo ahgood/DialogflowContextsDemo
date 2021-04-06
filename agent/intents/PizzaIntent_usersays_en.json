@@ -1,0 +1,61 @@
+[
+  {
+    "id": "0c5c5ba4-2ea4-4693-88df-c051f503d6f4",
+    "data": [
+      {
+        "text": "Pizza",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4c61fafc-7405-4b24-aaa9-b12c41b1bc29",
+    "data": [
+      {
+        "text": "I want to order a pizza",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "67eb5e6c-9f8c-4e4a-84a6-8a8b03d0f68f",
+    "data": [
+      {
+        "text": "I want to order a ",
+        "userDefined": false
+      },
+      {
+        "text": "12 inches",
+        "meta": "@PizzaSizes",
+        "alias": "pizzaSize",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Moonpie",
+        "meta": "@PizzaNames",
+        "alias": "pizzaName",
+        "userDefined": false
+      },
+      {
+        "text": " pizza",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

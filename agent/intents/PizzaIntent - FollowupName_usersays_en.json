@@ -1,0 +1,17 @@
+[
+  {
+    "id": "3eb5480d-01b4-4597-a762-5aa2a028a9ee",
+    "data": [
+      {
+        "text": "Moonpie",
+        "meta": "@PizzaNames",
+        "alias": "pizzaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  }
+]

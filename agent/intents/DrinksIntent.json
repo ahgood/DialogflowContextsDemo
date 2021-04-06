@@ -1,0 +1,84 @@
+{
+  "id": "bb7cabd0-1951-438a-bd9d-bc54688bc846",
+  "name": "DrinksIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "action_drinks_intent",
+      "affectedContexts": [
+        {
+          "name": "DrinksIntent-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "88360079-12cb-4f27-833a-cdc23a4c2548",
+          "name": "drinksName",
+          "required": false,
+          "dataType": "@DrinksNames",
+          "value": "$drinksName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8b3fe676-d653-4d77-861c-5e801c78684c",
+          "name": "pizzaName",
+          "required": false,
+          "dataType": "@PizzaNames",
+          "value": "$pizzaName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "53daa3d0-5b40-474a-a41a-b4ef8c7f4478",
+          "name": "pizzaSize",
+          "required": false,
+          "dataType": "@PizzaSizes",
+          "value": "$pizzaSize",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "event_drinks_intent"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "google-dialogflow-contexts-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "firebase serve --only functions"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.7.1",
+    "actions-on-google": "^2.13.0",
+    "firebase-functions": "^3.13.2"
+  }
+}

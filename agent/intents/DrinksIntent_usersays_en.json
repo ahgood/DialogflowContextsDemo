@@ -1,0 +1,30 @@
+[
+  {
+    "id": "81bfa625-1a05-42b1-b078-6617c10a9ca9",
+    "data": [
+      {
+        "text": "Drinks",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f4838bf5-cd9d-43bb-92c3-59fbe7a480df",
+    "data": [
+      {
+        "text": "Coke",
+        "meta": "@DrinksNames",
+        "alias": "drinksName",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

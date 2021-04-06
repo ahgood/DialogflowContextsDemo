@@ -1,0 +1,9 @@
+{
+  "id": "e6a3cca8-fa82-4d7e-bf47-634253f9d341",
+  "name": "PizzaNames",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "059d2b8c-e670-4470-a3ed-c91f17bc2056",
+  "parentId": "bb7cabd0-1951-438a-bd9d-bc54688bc846",
+  "rootParentId": "bb7cabd0-1951-438a-bd9d-bc54688bc846",
+  "name": "DrinksIntent - FollowupName",
+  "auto": true,
+  "contexts": [
+    "DrinksIntent-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "DrinksIntent-followup",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "41e98ed0-b4b1-4c5a-9cde-27b6a21be419",
+          "name": "drinksName",
+          "required": false,
+          "dataType": "@DrinksNames",
+          "value": "$drinksName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

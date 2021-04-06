@@ -1,0 +1,17 @@
+[
+  {
+    "id": "0f756843-6fa4-4def-aeec-ccc07a22e049",
+    "data": [
+      {
+        "text": "12 inches",
+        "meta": "@PizzaSizes",
+        "alias": "pizzaSize",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

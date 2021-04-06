@@ -1,0 +1,56 @@
+{
+  "id": "708e32de-bb1a-4866-bd84-177b0d873bb7",
+  "parentId": "f8a04c33-e384-4c0c-ad95-25959b8521fa",
+  "rootParentId": "f8a04c33-e384-4c0c-ad95-25959b8521fa",
+  "name": "PizzaIntent - FollowupName",
+  "auto": true,
+  "contexts": [
+    "PizzaIntent-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "PizzaIntent-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2a12c8cd-7e6d-48a1-a60f-b43ee5dc8349",
+          "name": "pizzaName",
+          "required": false,
+          "dataType": "@PizzaNames",
+          "value": "$pizzaName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
