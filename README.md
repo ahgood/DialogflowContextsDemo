@@ -1,6 +1,6 @@
 # About
 
-This is a simple voice app to demostry a way to use Dialogflow contexts in conversation.
+This is a simple voice app to demonstrate a way to use Dialogflow contexts in conversation.
 
 ## Setup
 
@@ -14,15 +14,16 @@ This is a simple voice app to demostry a way to use Dialogflow contexts in conve
 
 ## Test
 
-### Scenario 1, ask:
-1. Pizza
-2. Moonpie
-3. 12 inches
-
-### Scenario 2, ask:
+### Scenario 1(ask):
 1. Drinks
-2. Coke
+2. Coffee
 
-### Scenario 3, ask:
+### Scenario 2(ask):
 1. I want to order a 12 inches moonpie pizza
 2. Coke
+
+### Scenario 3(ask):
+1. Pizza
+2. Moonpie
+3. 18 inches
+4. Coffee
