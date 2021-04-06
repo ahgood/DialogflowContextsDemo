@@ -2,6 +2,8 @@ const functions = require('firebase-functions');
 const { dialogflow } = require('actions-on-google');
 
 const app = dialogflow({ debug: false });
+
+// Context name must be lowercase in function
 const PIZZA_INTENT_FOLLOWUP = 'PizzaIntent-followup'.toLowerCase();
 
 app.intent('Default Welcome Intent', conv => {
@@ -10,32 +12,34 @@ app.intent('Default Welcome Intent', conv => {
   );
 });
 
-app.intent('PizzaIntent', conv => {
-  // log(conv);
-  elicitPizza(conv, PIZZA_INTENT_FOLLOWUP);
-});
-
-app.intent('PizzaIntent - FollowupName', conv => {
-  // log(conv);
-  elicitPizza(conv, PIZZA_INTENT_FOLLOWUP);
-});
-
-app.intent('PizzaIntent - FollowupSize', conv => {
-  // log(conv);
-  elicitPizza(conv, PIZZA_INTENT_FOLLOWUP);
+app.intent('DrinksIntent', conv => {
+  elicitDrinks(conv);
 });
 
 app.intent('DrinksIntent - FollowupName', conv => {
-  // log(conv);
-  const pizzaContextName = PIZZA_INTENT_FOLLOWUP;
   const { pizzaName, pizzaSize } =
-    conv.contexts.get(pizzaContextName)?.parameters || {};
+    conv.contexts.get(PIZZA_INTENT_FOLLOWUP)?.parameters || {};
   const drinksName = conv.parameters?.drinksName?.toString() || '';
   conv.followup('event_drinks_intent', { drinksName, pizzaName, pizzaSize });
 });
 
-app.intent('DrinksIntent', conv => {
-  // log(conv);
+app.intent('PizzaIntent', conv => {
+  elicitPizza(conv);
+});
+
+app.intent('PizzaIntent - FollowupName', conv => {
+  elicitPizza(conv);
+});
+
+app.intent('PizzaIntent - FollowupSize', conv => {
+  elicitPizza(conv);
+});
+
+app.intent('Default Fallback Intent', conv => {
+  conv.ask(`I didn't understand. Can you tell me something else?`);
+});
+
+function elicitDrinks(conv) {
   const { drinksName, pizzaName, pizzaSize } = conv.parameters;
 
   if (pizzaName && pizzaSize && !drinksName) {
@@ -55,17 +59,16 @@ app.intent('DrinksIntent', conv => {
   }
 
   conv.ask(`Okay, you are ordering a cup of ${drinksName}.`);
-});
+}
 
-app.intent('Default Fallback Intent', conv => {
-  conv.ask(`I didn't understand. Can you tell me something else?`);
-});
-
-function elicitPizza(conv, contextName) {
-  const { pizzaName, pizzaSize } = conv.contexts.get(contextName).parameters;
+function elicitPizza(conv) {
+  const { pizzaName, pizzaSize } =
+    conv.contexts.get(PIZZA_INTENT_FOLLOWUP).parameters;
 
   if (!pizzaName) {
-    return conv.ask('What pizza do you want to order? we have Moonpie and Cheese Pizza.');
+    return conv.ask(
+      'What pizza do you want to order? we have Moonpie and Cheese Pizza.'
+    );
   }
 
   if (!pizzaSize) {
@@ -77,6 +80,10 @@ function elicitPizza(conv, contextName) {
   conv.followup('event_drinks_intent', { pizzaName, pizzaSize });
 }
 
+exports.fulfillment = functions.https.onRequest(app);
+
+// Function for Debugging
+//
 // function log(conv) {
 //   console.log({
 //     conv: JSON.stringify(conv, null, 2),
@@ -85,5 +92,3 @@ function elicitPizza(conv, contextName) {
 //     Intent: conv.intent,
 //   });
 // }
-
-exports.fulfillment = functions.https.onRequest(app);
