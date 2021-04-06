@@ -12,9 +12,7 @@ app.intent('Default Welcome Intent', conv => {
   );
 });
 
-app.intent('DrinksIntent', conv => {
-  elicitDrinks(conv);
-});
+app.intent('DrinksIntent', conv => elicitDrinks(conv));
 
 app.intent('DrinksIntent - FollowupName', conv => {
   const { pizzaName, pizzaSize } =
@@ -23,17 +21,11 @@ app.intent('DrinksIntent - FollowupName', conv => {
   conv.followup('event_drinks_intent', { drinksName, pizzaName, pizzaSize });
 });
 
-app.intent('PizzaIntent', conv => {
-  elicitPizza(conv);
-});
+app.intent('PizzaIntent', conv => elicitPizza(conv));
 
-app.intent('PizzaIntent - FollowupName', conv => {
-  elicitPizza(conv);
-});
+app.intent('PizzaIntent - FollowupName', conv => elicitPizza(conv));
 
-app.intent('PizzaIntent - FollowupSize', conv => {
-  elicitPizza(conv);
-});
+app.intent('PizzaIntent - FollowupSize', conv => elicitPizza(conv));
 
 app.intent('Default Fallback Intent', conv => {
   conv.ask(`I didn't understand. Can you tell me something else?`);
